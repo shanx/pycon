@@ -20,8 +20,8 @@ def speaker_dashboard(request):
     if request.user.is_authenticated():
         if Speaker.objects.filter(user=request.user).exists():
             proposals = Proposal.objects.filter(
-                Q(speaker=request.user.speaker_profile) |
-                Q(additional_speakers=request.user.speaker_profile)
+                Q(speaker=request.user.speaker_profile) | # @@@
+                Q(additional_speakers=request.user.speaker_profile) # @@@
             ).distinct()
             if proposals.count():
                 ctx["proposal_text"] = "submit another talk proposal"
@@ -41,7 +41,7 @@ def speaker_dashboard(request):
 @login_required
 def speaker_create(request):
     try:
-        return redirect(request.user.speaker_profile)
+        return redirect(request.user.speaker_profile) # @@@
     except ObjectDoesNotExist:
         pass
     if request.method == "POST":
@@ -74,7 +74,7 @@ def speaker_create_token(request, token):
     if request.user.is_authenticated():
         # check for speaker profile
         try:
-            existing_speaker = request.user.speaker_profile
+            existing_speaker = request.user.speaker_profile # @@@
         except ObjectDoesNotExist:
             pass
         else:
@@ -149,7 +149,7 @@ def speaker_create_token(request, token):
 def speaker_edit(request, pk=None):
     if pk is None:
         try:
-            speaker = request.user.speaker_profile
+            speaker = request.user.speaker_profile # @@@
         except Speaker.DoesNotExist:
             return redirect("speaker_create")
     else:

@@ -1,5 +1,6 @@
+{% load account_tags %}
 <p>
-    <b>{{ message.user }}</b> has added a message on <b>{{ proposal.title }}</b>.
+    <b>{% user_display message.user %}</b> has added a message on <b>{{ proposal.title }}</b>.
 </p>
 <blockquote>
     {{ message.message_html|safe }}

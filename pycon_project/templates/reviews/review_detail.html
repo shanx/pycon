@@ -1,5 +1,6 @@
 {% extends "reviews/base.html" %}
 
+{% load account_tags %}
 {% load uni_form_tags %}
 
 {% block extra_head %}
@@ -135,7 +136,7 @@
                 <div class="vote">{{ review.vote }}</div>
                 <div class="comment">{{ review.comment_html|safe }}</div>
                 <div class="dateline">
-                    <b>{{ review.user }}</b> {{ review.submitted_at|timesince }} ago
+                    <b>{% user_display review.user %}</b> {{ review.submitted_at|timesince }} ago
                     {% if is_reviewer_admin %}<form method="POST" action="{% url review_delete review.pk %}">{% csrf_token %}<input type="submit" value="delete" /></form>{% endif %}
                 </div>
             </div>
@@ -161,7 +162,7 @@
         {% for message in proposal.messages.all %}
             <div class="review-box">
                 <div class="comment">{{ message.message_html|safe }}</div>
-                <div class="dateline"><b>{{ message.user }}</b> {{ message.submitted_at|timesince }} ago</div>
+                <div class="dateline"><b>{% user_display message.user %}</b> {{ message.submitted_at|timesince }} ago</div>
             </div>
             <div class="clear"></div>
         {% endfor %}

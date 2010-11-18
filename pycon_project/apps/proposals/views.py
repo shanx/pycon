@@ -26,7 +26,7 @@ def proposal_submit(request):
         return redirect("speaker_dashboard")
     else:
         try:
-            speaker_profile = request.user.speaker_profile
+            speaker_profile = request.user.speaker_profile # @@@
         except ObjectDoesNotExist:
             return redirect("speaker_dashboard")
     if request.method == "POST":
@@ -86,7 +86,7 @@ def proposal_speaker_manage(request, pk):
                 message_ctx["user"] = user
                 # look for speaker profile
                 try:
-                    speaker = user.speaker_profile
+                    speaker = user.speaker_profile # @@@
                 except ObjectDoesNotExist:
                     speaker, token = create_speaker_token(email_address)
                     message_ctx["token"] = token

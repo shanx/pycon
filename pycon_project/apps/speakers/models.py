@@ -7,11 +7,11 @@ from django.contrib.auth.models import User
 
 from biblion import creole_parser
 
+from profiles.models import Profile
 
-class Speaker(models.Model):
+
+class Speaker(Profile):
     
-    user = models.OneToOneField(User, null=True, related_name="speaker_profile")
-    name = models.CharField(max_length=100)
     biography = models.TextField(
         help_text = "You can use <a href='http://wikicreole.org/' target='_blank'>creole</a> markup. <a id='preview' href='#'>Preview</a>",
     )

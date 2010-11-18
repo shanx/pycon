@@ -142,7 +142,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "markitup",
     "nashvegas",
-    
+    "idios",
     "emailconfirmation",
     "timezones",
     "django_openid",
@@ -191,6 +191,7 @@ ACCOUNT_REQUIRED_EMAIL = True
 ACCOUNT_EMAIL_VERIFICATION = True
 ACCOUNT_EMAIL_AUTHENTICATION = False
 ACCOUNT_UNIQUE_EMAIL = EMAIL_CONFIRMATION_UNIQUE_EMAIL = True
+ACCOUNT_USER_DISPLAY = lambda u: u.get_full_name() if u.get_full_name() else u.username
 
 AUTHENTICATION_BACKENDS = [
     "pinax.apps.account.auth_backends.AuthenticationBackend",
