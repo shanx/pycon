@@ -44,13 +44,17 @@ class ProposalAdmin(admin.ModelAdmin):
         filename = "talks-%s.csv" % time.strftime("%Y-%m-%d")
         response["Content-Disposition"] = "attachment; filename=%s" % filename
         
-        for proposal in Proposal.objects.filter(session_type__in=[1, 2]):
+        talks = Proposal.objects.filter(
+            session_type__in=[Proposal.SESSION_TYPE_TALK, Proposal.SESSION_TYPE_PANEL]
+        )
+        
+        for talk in talks:
             writer.writerow([
-                proposal.id, proposal.title, proposal.speaker.name, 
-                proposal.get_audience_level_display(), proposal.invited,
-                proposal.extreme_pycon, proposal.result.plus_one,
-                proposal.result.plus_zero, proposal.result.minus_zero,
-                proposal.result.minus_one,
+                talk.id, talk.title, talk.speaker.name,
+                talk.get_audience_level_display(), talk.invited,
+                talk.extreme_pycon, talk.result.plus_one,
+                talk.result.plus_zero, talk.result.minus_zero,
+                talk.result.minus_one,
             ])
         return response
 
