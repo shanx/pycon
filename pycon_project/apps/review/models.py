@@ -212,6 +212,7 @@ class ProposalResult(models.Model):
         (False, "rejected"),
         (None, "undecided"),
     ], default=None)
+    rejection_reason = models.TextField(blank=True)
     
     @classmethod
     def full_calculate(cls):
