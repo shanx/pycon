@@ -10,7 +10,7 @@ def schedule_list(request, template_name="schedule/schedule_list.html", extra_co
     if extra_context is None:
         extra_context = {}
     
-    event = get_object_or_404(Event, slug="djangocon-us-2010")
+    event = get_object_or_404(Event, slug="pycon-us-2011")
     slots = Slot.objects.filter(event=event).order_by("start")
     
     return render_to_response(template_name, dict({

@@ -23,4 +23,16 @@
             "name": "PyCon 2011 Atlanta"
         }
     }
+    {
+        "pk": 1, 
+        "model": "schedule.event", 
+        "fields": {
+            "end": "2011-03-17 12:00:00", 
+            "description": "PyCon is the largest annual gathering for the community using and developing the open-source Python programming language. PyCon is organized by the Python community for the community.", 
+            "start": "2011-03-09 12:00:00", 
+            "location": "Hyatt Regency Atlanta, GA", 
+            "slug": "pycon-us-2011", 
+            "name": "PyCon 2011 Atlanta"
+        }
+    }
 ]
