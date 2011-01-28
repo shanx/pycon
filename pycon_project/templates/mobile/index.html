@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-startup-image" href="{{ STATIC_URL }}/jqtouch/startup.png" />
+		<link rel="apple-touch-icon" href="{{ STATIC_URL }}/jqtouch/images/icon.png" /> 
+        <title>PyCon 2011</title>
+		<link rel="stylesheet" href="{{ STATIC_URL }}jqtouch/jqtouch.css" type="text/css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}jqtouch/themes/pycon/theme.css" type="text/css">
+        <script type="text/javascript" src="{{ STATIC_URL }}jqtouch/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}jqtouch/jqtouch.js"></script>
+        <script type="text/javascript">
+            var jqt = new $.jQTouch();
+        </script>
+    </head>
+    <body>
+        <div id="jqt">
+            <div id="home">
+                <div class="toolbar">
+                    <h1>PyCon Mobile</h1>
+
+                </div>
+				<div class="info">
+					<p>This is the static prototype mobile schedule for PyCon.</p>
+				</div>
+				<h2>Tutorial Days</h2>
+                <ul class="rounded">
+                    <li class="arrow">
+						<a href="#tutorial-day">March 9</a>
+					</li>
+					<li class="arrow">
+						<a href="#tutorial-day">March 10</a>
+					</li>
+				</ul>
+				<h2>Conference Days</h2>
+				<ul class="rounded">
+                    <li class="arrow">
+						<a href="#conference-day">March 11</a>
+					</li>
+                    <li class="arrow">
+						<a href="#conference-day">March 12</a>
+					</li>
+					<li class="arrow">
+						<a href="#conference-day">March 13</a>
+					</li>
+                </ul>
+				<h2>Sprints</h2>
+				<ul class="rounded">
+					<li class="arrow">
+						<a href="#sprint">Python</a>
+					</li>
+                    <li class="arrow">
+						<a href="#sprint">Django</a>
+					</li>
+                    <li class="arrow">
+						<a href="#sprint">SQLalchemy</a>
+					</li>
+					<li class="arrow">
+						<a href="#sprint">Pinax</a>
+					</li>
+                </ul>
+            </div>
+            <div id="tutorial-day">
+                <div class="toolbar">
+                    <h1>Tutorial Day</h1>
+                    <a class="back" href="#">Back</a>
+                </div>
+				
+                <ul class="edgetoedge">
+					<li class="sep">9:00am-12:20pm</li>
+                    <li class="">
+						<a href="#tutorial-description">web2py Secrets</a>
+						<a href="#tutorial-description">Novice Tutorial by Massimo Di Pierro</a>
+					</li>
+                    <li class="">
+						<a href="#tutorial-description">Building your own tile server using OpenStreetMap</a>
+						<a href="#tutorial-description">Novice Tutorial by Andrii Mishkovskyi</a>
+					</li>
+                    <li class="">
+						<a href="#tutorial-description">Python 101</a>
+						<a href="#tutorial-description">Novice Tutorial by Stuart Williams</a>
+					</li>
+					<li class="">
+						<a href="#tutorial-description">Pinax Solutions</a>
+						<a href="#tutorial-description">Novice Tutorial by Daniel Greenfeld with Brian Rosner</a>
+					</li>
+					<li class="sep">12:30pm-1:45pm</li>
+					<li class="">
+						<a href="#lunch">Lunch</a>
+						<a href="#lunch">In the Peachtree Ballroom</a>
+					</li>
+					<li class="sep">12:30pm-1:45pm</li>
+					<li class="">
+						<a href="#tutorial-description">web2py Secrets</a>
+						<a href="#tutorial-description">Novice Tutorial by Massimo Di Pierro</a>
+					</li>
+                    <li class="">
+						<a href="#tutorial-description">Building your own tile server using OpenStreetMap</a>
+						<a href="#tutorial-description">Novice Tutorial by Andrii Mishkovskyi</a>
+					</li>
+                    <li class="">
+						<a href="#tutorial-description">Python 101</a>
+						<a href="#tutorial-description">Novice Tutorial by Stuart Williams</a>
+					</li>
+					<li class="">
+						<a href="#tutorial-description">Pinax Solutions</a>
+						<a href="#tutorial-description">Novice Tutorial by Daniel Greenfeld with Brian Rosner</a>
+					</li>
+                </ul>
+            </div>
+            <div id="conference-day">
+                <div class="toolbar">
+                    <h1>Conf Day</h1>
+                    <a class="back" href="#">Back</a>
+                </div>
+				
+                <ul class="edgetoedge">
+					<li class="sep">8:00am</li>
+					<li class="">
+						<a href="#talk-description">Python and You</a>
+						<a href="#talk-description">Keynote address by Guido Van Rossum</a>
+					</li>
+					<li class="sep">9:00am-10:00pm</li>
+                    <li class="">
+						<a href="#talk-description">Let's talk about threads</a>
+						<a href="#talk-description">Novice talk by Bob Smith</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Another talk</a>
+						<a href="#talk-description">Novice talk by Smith Bobs</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Yet Another Talk</a>
+						<a href="#talk-description">Novice talk by Jane Doe</a>
+					</li>
+					<li class="sep">10:30am-11:30pm</li>
+                    <li class="">
+						<a href="#talk-description">Let's talk about threads</a>
+						<a href="#talk-description">Novice talk by Bob Smith</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Another talk</a>
+						<a href="#talk-description">Novice talk by Smith Bobs</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Yet Another Talk</a>
+						<a href="#talk-description">Novice talk by Jane Doe</a>
+					</li>
+					<li class="sep">12:30pm-1:30pm</li>
+					<li class="">
+						<a href="#march-13">Lunch</a>
+						<a href="#march-13">Bacon in the Peachtree Ballroom</a>
+					</li>
+					<li class="sep">2:00pm-3:00pm</li>
+                    <li class="">
+						<a href="#talk-description">Let's talk about threads</a>
+						<a href="#talk-description">Novice talk by Bob Smith</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Another talk</a>
+						<a href="#talk-description">Novice talk by Smith Bobs</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Yet Another Talk</a>
+						<a href="#talk-description">Novice talk by Jane Doe</a>
+					</li>
+					<li class="sep">3:30pm-4:30pm</li>
+                    <li class="">
+						<a href="#talk-description">Let's talk about threads</a>
+						<a href="#talk-description">Novice talk by Bob Smith</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Another talk</a>
+						<a href="#talk-description">Novice talk by Smith Bobs</a>
+					</li>
+                    <li class="">
+						<a href="#talk-description">Yet Another Talk</a>
+						<a href="#talk-description">Novice talk by Jane Doe</a>
+					</li>
+                </ul>
+            </div>
+			<div id="tutorial-description">
+                <div class="toolbar">
+                    <h1>Tutorial One</h1>
+                    <a class="back" href="#">Back</a>
+                </div>
+				<div class="info">
+					<p>
+						Let's learn about something.
+						One reason for Python's success is its restraint
+						in adding new language features.
+					</p>
+					<p>More info about the tutorial here.</p>
+				</div>
+            </div>
+			<div id="talk-description">
+				<div class="toolbar">
+					<h1>Talk One</h1>
+					<a class="back" href="#">Back</a>
+				</div>
+				<div class="info">
+					<p>
+						One reason for Python's success is its restraint
+						in adding new language features.
+					</p>
+					<p>More info about the talk here.</p>
+				</div>
+			</div>
+				
+            <div id="sprint">
+                <div class="toolbar">
+                    <h1>Sprint</h1>
+                    <a class="back" href="#">Home</a>
+                </div>
+                <div class="info">
+                    <p>We're going to fix some bugs.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

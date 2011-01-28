@@ -34,6 +34,7 @@ urlpatterns = patterns("",
         url(r"^creole_preview/$", creole_preview, name="creole_preview"),
         url(r"^feed/(?P<section>\w+)/$", "biblion.views.blog_feed", name="blog_feed"),
         url(r"^markitup/", include("markitup.urls")),
+        url('^mobile/$', direct_to_template, {'template': 'mobile/index.html'}),
         url(r"^", include("wakawaka.urls")),
     ))),
 )
