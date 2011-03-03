@@ -1,0 +1,82 @@
+{"days":
+    [
+    {% with friday as day %}
+    {
+        "day": "friday",
+        "items":
+        [
+        {% for row in day %}
+            {   
+                "date": "{{ row.time|date:"h:iA" }}",
+                "slots": 
+                [
+                {% for slot in row.slots %}
+                    {
+                        "title": "{{ slot.content.title|escapejs }}",
+                        "speaker": "{{ slot.content.speaker|escapejs }}",
+                        "description": "{{ slot.content.description|escapejs }}",
+                        "start": "{{ slot.start|date:"h:iA" }}",
+                        "end": "{{ slot.end|date:"h:iA" }}"
+                    }{% if not forloop.last %},{% endif %}
+
+                {% endfor %}
+                ]
+            }{% if not forloop.last %},{% endif %}
+        {% endfor %}
+        ]
+    },
+       {% endwith %}
+    {% with saturday as day %}
+    {
+        "day": "saturday",
+        "items":
+        [
+        {% for row in day %}
+            {   
+                "date": "{{ row.time|date:"h:iA" }}",
+                "slots": 
+                [
+                {% for slot in row.slots %}
+                    {
+                        "title": "{{ slot.content.title|escapejs }}",
+                        "speaker": "{{ slot.content.speaker|escapejs }}",
+                        "description": "{{ slot.content.description|escapejs }}",
+                        "start": "{{ slot.start|date:"h:iA" }}",
+                        "end": "{{ slot.end|date:"h:iA" }}"
+                    }{% if not forloop.last %},{% endif %}
+
+                {% endfor %}
+                ]
+            }{% if not forloop.last %},{% endif %}
+        {% endfor %}
+        ]
+    },
+    {% endwith %}
+    {% with sunday as day %}
+    {
+        "day": "sunday",
+        "items":
+        [
+        {% for row in day %}
+            {   
+                "date": "{{ row.time|date:"h:iA" }}",
+                "slots": 
+                [
+                {% for slot in row.slots %}
+                    {
+                        "title": "{{ slot.content.title|escapejs }}",
+                        "speaker": "{{ slot.content.speaker|escapejs }}",
+                        "description": "{{ slot.content.description|escapejs }}",
+                        "start": "{{ slot.start|date:"h:iA" }}",
+                        "end": "{{ slot.end|date:"h:iA" }}"
+                    }{% if not forloop.last %},{% endif %}
+
+                {% endfor %}
+                ]
+            }{% if not forloop.last %},{% endif %}
+        {% endfor %}
+        ]
+    }
+       {% endwith %}
+    ]
+}

@@ -212,7 +212,7 @@ def schedule_conference_edit(request):
     return render_to_response("schedule/conference_edit.html", ctx)
 
 
-def schedule_conference(request):
+def schedule_conference(request, format="html"):
     ctx = {
         "friday": Timetable(Slot.objects.filter(start__week_day=6), user=request.user),
         "saturday": Timetable(Slot.objects.filter(start__week_day=7), user=request.user),
@@ -220,7 +220,11 @@ def schedule_conference(request):
         "csrf_token": csrf(request),
     }
     ctx = RequestContext(request, ctx)
-    return render_to_response("schedule/conference.html", ctx)
+    
+    if format == "json":
+        return render_to_response("schedule/conference.json", ctx, mimetype="application/json")
+    else:
+        return render_to_response("schedule/conference.html", ctx)
 
 
 @login_required
