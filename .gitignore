@@ -1,3 +1,30 @@
+# Generic python ignores, taken from: https://github.com/github/gitignore/blob/master/Python.gitignore
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Virtual env ignores
+.Python
+include
+lib
+share
+
+# Specific project ignores
 local_settings.py
 dev.db
-*.pyc
