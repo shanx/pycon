@@ -1,26 +1,26 @@
 [
     {
-        "pk": 1, 
-        "model": "sites.site", 
+        "pk": 1,
+        "model": "sites.site",
         "fields": {
-            "domain": "localhost:8000", 
-            "name": "PyCon 2011 Atlanta"
+            "domain": "localhost:8000",
+            "name": "DjangoCon Europe 2011 Amsterdam"
         }
     },
     {
-        "pk": 2, 
-        "model": "sites.site", 
+        "pk": 2,
+        "model": "sites.site",
         "fields": {
-            "domain": "pycon.eldarion.com", 
-            "name": "PyCon 2011 Atlanta"
+            "domain": "2011.djangocon.eu.maykin.nl",
+            "name": "DjangoCon Europe 2011 Amsterdam"
         }
     },
     {
-        "pk": 3, 
-        "model": "sites.site", 
+        "pk": 3,
+        "model": "sites.site",
         "fields": {
-            "domain": "us.pycon.org", 
-            "name": "PyCon 2011 Atlanta"
+            "domain": "2011.djangocon.eu",
+            "name": "DjangoCon Europe 2011 Amsterdam"
         }
     }
 ]

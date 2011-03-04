@@ -115,13 +115,13 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.request",
-    
+
     "staticfiles.context_processors.static_url",
-    
+
     "pinax.core.context_processors.pinax_settings",
-    
+
     "pinax.apps.account.context_processors.account",
-    
+
     "review.context_processors.permissions",
 ]
 
@@ -134,7 +134,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.humanize",
-    
+
     # external
     "mailer",
     "uni_form",
@@ -142,7 +142,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "markitup",
     "nashvegas",
-    
+
     "emailconfirmation",
     "timezones",
     "django_openid",
@@ -154,12 +154,12 @@ INSTALLED_APPS = [
     "biblion",
     "fixture_generator",
     "sorl.thumbnail",
-    
+
     # Pinax
     "pinax.templatetags",
     "pinax.apps.waitinglist",
     "pinax.apps.account",
-    
+
     # project
     "speakers",
     "proposals",
@@ -178,7 +178,7 @@ FIXTURE_DIRS = [
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 CONTACT_EMAIL = "pycon@eldarion.com" # @@@ temporary
-SITE_NAME = "PyCon 2011 Atlanta - A Conference for the Python Community"
+SITE_NAME = "DjangoCon Europe 2011 Amsterdam - The European conference on the Django framework"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
